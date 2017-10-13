@@ -180,3 +180,10 @@ void MotionHandler::SetSpeedU(double speed)
 	msg.Info("Setting rotational speed to", std::to_string(speed));
 	return;
 }
+
+std::vector<double> MotionHandler::WhereAmI() {
+
+	msg.Info("Meaningless request in base class.");
+	std::vector<double> empty = {0.0,0.0,0.0,0.0};
+	return empty;
+}

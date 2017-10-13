@@ -8,8 +8,8 @@
 int main()
 {
 	std::cout << "Beginning testing" << std::endl;
-	Gantry_Vancouver myGantry;
-	//MotionHandler myGantry;
+	//Gantry_Vancouver myGantry;
+	MotionHandler myGantry;
 
 	// Initialise
 	myGantry.ActivateGantry();

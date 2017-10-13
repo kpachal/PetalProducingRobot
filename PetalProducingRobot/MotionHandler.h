@@ -98,6 +98,12 @@ public:
 	// Set speed for u axis
 	virtual void SetSpeedU(double speed);
 
+	///////////////////////////////
+	// Status commands
+
+	// Returns current location as vector in x, y, z, u
+	virtual std::vector<double> WhereAmI();
+
 protected :
 
 	// For delivering messages.

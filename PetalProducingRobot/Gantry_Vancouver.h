@@ -107,6 +107,7 @@ public:
 	///////////////////////////////
 	// Status commands
 
+	// Returns current location as vector in x, y, z, u
 	std::vector<double> WhereAmI();
 
 private :
