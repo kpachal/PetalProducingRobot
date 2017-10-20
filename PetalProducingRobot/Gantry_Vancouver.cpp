@@ -102,6 +102,17 @@ void Gantry_Vancouver::MoveTo(double x, double y, double z, double speed)
 	return;
 }
 
+void Gantry_Vancouver::MoveZTo(double z, double speed) {
+	if (!(isnan(speed))) {
+		A3200MotionMoveAbs(gantry, TASKID_Library, zindex, z, speed);
+	}
+	else {
+		A3200MotionMoveAbs(gantry, TASKID_Library, zindex, z, default_zspeed);
+	}
+	A3200MotionWaitForMotionDone(gantry, allAxes, WAITOPTION_InPosition, -1, NULL);
+	return;
+}
+
 // Move relative to current location by an amount x, y, z
 // Note default unit is mm
 void Gantry_Vancouver::MoveBy(double x, double y, double z, double speed)
@@ -120,6 +131,17 @@ void Gantry_Vancouver::MoveBy(double x, double y, double z, double speed)
 	A3200MotionWaitForMotionDone(gantry, allAxes, WAITOPTION_InPosition, -1, NULL);
 
 	msg.Info("Moved axes by", x, y, z);
+	return;
+}
+
+void Gantry_Vancouver::MoveZBy(double z, double speed) {
+	if (!(isnan(speed))) {
+		A3200MotionMoveInc(gantry, TASKID_Library, zindex, z, speed);
+	}
+	else {
+		A3200MotionMoveInc(gantry, TASKID_Library, zindex, z, default_zspeed);
+	}
+	A3200MotionWaitForMotionDone(gantry, allAxes, WAITOPTION_InPosition, -1, NULL);
 	return;
 }
 

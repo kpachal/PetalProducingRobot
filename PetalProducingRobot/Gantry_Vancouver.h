@@ -46,9 +46,15 @@ public:
 	// Note default unit is mm
 	void MoveTo(double x, double y, double z, double speed = NAN);
 
+	// Move only in z (useful for autofocus)
+	void MoveZTo(double z, double speed = NAN);
+
 	// Move relative to current location by an amount x, y, z
 	// Note default unit is mm
 	void MoveBy(double x, double y, double z, double speed = NAN);
+
+	// Move only in z (useful for autofocus)
+	void MoveZBy(double z, double speed = NAN);
 
 	// Begin free running (x direction)
 	void RunX();

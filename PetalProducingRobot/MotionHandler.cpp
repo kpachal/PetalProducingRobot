@@ -55,11 +55,22 @@ void MotionHandler::MoveTo(double x, double y, double z, double speed)
 	return;
 }
 
+void MotionHandler::MoveZTo(double z, double speed) {
+	msg.Info("Moved z axis to", z, "at speed", speed);
+	return;
+}
+
+
 // Move relative to current location by an amount x, y, z
 // Note default unit is mm
 void MotionHandler::MoveBy(double x, double y, double z, double speed)
 {
 	msg.Info("Moved axes by", x, y, z, "at speed", speed);
+	return;
+}
+
+void MotionHandler::MoveZBy(double z, double speed) {
+	msg.Info("Moved z axis by", z, "at speed", speed);
 	return;
 }
 
