@@ -7,6 +7,12 @@
 
 using namespace cv;
 
+enum FOCUS_ALG
+{
+	LAPV = 0,
+	LAPM = 1
+};
+
 class Autofocuser
 {
 public:
@@ -23,7 +29,7 @@ protected :
 
 	Mat Blur(Mat img);
 
-	double Laplacian(Mat img);
+	double modLaplacian(Mat img);
 
 	double varLaplacian(Mat img);
 
@@ -33,6 +39,10 @@ protected :
 
 	// For delivering messages.
 	MessageHandler msg;
+
+	// For setting the algorithm to be
+	// used to define the degree of focus
+	FOCUS_ALG m_focusAlg;
 
 	// MOVE THESE VALUES TO A CONFIG FILE
 	double m_dTable;

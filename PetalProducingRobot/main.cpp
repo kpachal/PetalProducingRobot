@@ -33,21 +33,5 @@ int main()
 	// Focus
 	focuser.Focus();
 
-	// Get location: where am I?
-	std::vector<double> location = myGantry.WhereAmI();
-	std::cout << "I am at location x=" << location.at(0) << ", y=" << location.at(1) << ", z=" << location.at(2) << ", u=" << location.at(3) << std::endl;
 	return 0;
-}
-
-void displayVideo(VideoCapture cap) {
-	
-	for (;;) {
-		Mat frame;
-		cap >> frame;
-		if (frame.empty()) break;
-		imshow("here is a table!", frame);
-		if (waitKey(10) == 27) break; // stop with ESC
-
-	}
-
 }

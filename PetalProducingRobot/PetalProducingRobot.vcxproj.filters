@@ -35,13 +35,13 @@
     <ClCompile Include="Gantry_Vancouver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="MessageHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Autofocuser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BasicFocus.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
